@@ -1,0 +1,16 @@
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:l="sap.ui.layout" xmlns="sap.m">
+	<Dialog title="ABC Next check date" afterClose="afterClose" beforeOpen="beforeOpen" class="sapUiPopupWithPadding">
+        <!-- content -->
+        <l:VerticalLayout width="100%">
+            <!-- message strip -->
+            <MessageStrip id="rejectAllItemsMessageStrip" visible="false" showCloseButton="false" showIcon="true" type="Error" class="sapUiResponsiveMargin"/>
+            <!-- label -->
+            <Label labelFor="ABCCheckDateField" text="ABC Next check date" required="true"/>
+			<!-- date picker -->
+            <DatePicker id="ABCCheckDateField" placeholder="Enter Date"  change="handleChange" class="sapUiSmallMarginBottom"/>
+		</l:VerticalLayout>
+        <!-- footer -->
+		<beginButton><Button press="onOKPressed" text="OK"/></beginButton>
+		<endButton><Button press="onCancelPressed" text="Cancel"/></endButton>
+	</Dialog>
+</core:FragmentDefinition>
